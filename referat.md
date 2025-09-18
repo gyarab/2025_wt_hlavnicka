@@ -8,6 +8,7 @@ Steve Wilhite byl americký počítačový vědec, který se proslavil jako **tv
 - Nejznámější přínos: vytvoření formátu GIF (1987)  
 
 Ukázka GIFu:
+
 ![Ukázkový GIF](https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif)
 
 Více informací o jeho životě a díle najdete na [Wikipedii](https://en.wikipedia.org/wiki/Steve_Wilhite).
