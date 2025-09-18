@@ -1,6 +1,6 @@
 # 2025_wt_hlavnicka
 Můj repozitář na hodiny webových technologií.
-Referát se nachází v souboru (referát)[https://github.com/gyarab/2025_wt_hlavnicka/blob/main/referat.md].
+Referát se nachází v souboru [referát](https://github.com/gyarab/2025_wt_hlavnicka/blob/main/referat.md).
 
 Pro jistotu ho vkládám i sem:
 ## Steve Wilhite
