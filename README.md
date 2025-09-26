@@ -1,9 +1,4 @@
-# 2025_wt_hlavnicka
-Můj repozitář na hodiny webových technologií.
-Referát se nachází v souboru [referát](https://github.com/gyarab/2025_wt_hlavnicka/blob/main/referat.md).
-
-Pro jistotu ho vkládám i sem:
-## Steve Wilhite
+# Steve Wilhite
 
 Steve Wilhite byl americký počítačový vědec, který se proslavil jako **tvůrce formátu `GIF` (Graphics Interchange Format)**. Tento formát dodnes používáme k ukládání jednoduchých animací a grafiky na internetu. V roce 2021 získal cenu **Webby Lifetime Achievement Award** za svůj přínos digitální kultuře.
 
