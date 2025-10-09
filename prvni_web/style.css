@@ -77,3 +77,30 @@ button {
 button:hover {
     background-color: #5ae66a;
 }
+table {
+    width: 100%;
+    margin: 20px 0;
+    background-color: #02202a;
+
+}
+th, td {
+    border: 1px solid #6fff7b;
+    padding: 10px;
+    text-align: left;
+    color: #ffffff;
+}
+ul,ol {
+    color: #ffffff;
+}
+ul li::marker {
+    color: #6fff7b;
+}
+ol li::marker {
+    color: #6fff7b;
+}
+a {
+    color: #6fff7b;
+}
+a:hover {
+    color: #5ae66a;
+}
