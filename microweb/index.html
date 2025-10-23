@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="cz-cs ">
-
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pronajmi si mráček!</title>
 
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <style>
 
+    </style>
 </head>
 
 <body class="bg-light">
@@ -28,7 +28,7 @@
                             <a class="nav-link active px-3" aria-current="page" href="#">Domů</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-3" href="#">O nás</a>
+                            <a class="nav-link px-3" href="#procMy">Proč my</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link px-3" href="#formular">Služby</a>
@@ -41,15 +41,27 @@
             </div>
         </nav>
     </header>
-
-    <img src="https://cdn.pixabay.com/photo/2022/07/07/07/24/clouds-7306684_960_720.jpg" alt="mrak na obloze"
-        class="img-fluid w-100" style="max-height:400px; object-fit:cover;">
-    <div class="container">
-        <h1 class="mb-4 mt-3">Pronajmi si mráček!</h1>
+    <div class="alert alert-warning bg-warning alert-dismissible fade show fixed-top mt-5 mb-3 text-center p-3 rounded"
+        role="alert">
+        <div class="container d-flex pr-5 pl-5">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Zavřít"></button>
+            <p class="text-muted"> Tento web je vytvořen pro demonstrační účely, žádné skutečné pronájmy mráčků nejsou
+                poskytovány, podáním poptávky nepovstává žádný právní vztah.
+        </div>
+    </div>
+    <div class="hero w-100" role="img" aria-label="mrak na obloze"
+        style="background-image:url('cloudbg.jpg'); background-size:cover; background-position:center; height:clamp(200px,35vw,400px); display:flex; align-items:center;">
+        <div class="w-100" style="background:rgba(0,0,0,0.4);">
+            <div class="container py-4"></div>
+            <h1 class="mb-4 mt-3 text-white" style="text-shadow:0 2px 6px rgba(0,0,0,0.6); text-align: center;">Pronajmi
+                si mráček</h1>
+        </div>
+    </div>
+    <div class="container my-5">
         <p>Vítejte na naší stránce, kde si můžete pronajmout svůj vlastní mráček. Ať už potřebujete mráček pro osobní
             nebo obchodní účely, jsme tu, abychom vám pomohli.</p>
         <p>Prozkoumejte naše služby a najděte ten pravý mráček pro vás!</p>
-        <button class="btn btn-primary mb-5">Zjistit více</button>
+        <a href="#procMy" class="btn btn-primary mt-3">zjistit víc</a>
 
         <div class="row mt-4 gy-4">
             <div class="col-12 col-sm-6 col-md-4">
@@ -92,22 +104,73 @@
             </div>
 
         </div>
+
+
+        <section class="my-5 row">
+            <div class="col-6">
+                <h2 class="mb-3">Podívejte se na náš mráček v akci!</h2>
+                <p>Podívejte se na úžasné záběry našeho mráčku v pohybu. Užijte si krásu oblohy a mraků z pohodlí vašeho
+                    domova.</p>
+            </div>
+            <iframe class="col-6" width="700" height="394" src="https://www.youtube.com/embed/obclZDUAeSY"
+                title="Clouds &amp; Airports (Timelapse)" style="border:none;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
     </div>
-    <div class="container-fluid py-5 mt-5" style="background-color: #e0f7fa;">
+    <div id="procMy" class="container-fluid py-5 mt-5" style="background-color: #e0f7fa;">
         <section class="text-center">
             <h2 class="mb-3">Proč si pronajmout mráček u nás?</h2>
             <div class="d-flex justify-content-center">
                 <ul class="list-unstyled text-start" style="max-width:360px;">
-                    <li class="mb-2">☁️ Široká nabídka mráčků pro různé účely</li>
-                    <li class="mb-2">☁️ Flexibilní doba pronájmu</li>
-                    <li class="mb-2">☁️ Profesionální a přátelský zákaznický servis</li>
-                    <li class="mb-2">☁️ Konkurenční ceny</li>
+                    <li class="mb-2"><span aria-hidden="true">☁️</span> <strong>Široká nabídka</strong> mráčků pro různé
+                        účely</li>
+                    <li class="mb-2"> <span aria-hidden="true">☁️</span> Flexibilní <strong>doba pronájmu</strong></li>
+                    <li class="mb-2"><span aria-hidden="true">☁️</span> <strong>Profesionální</strong> a přátelský
+                        zákaznický servis</li>
+                    <li class="mb-2"><span aria-hidden="true">☁️</span> Konkurenční ceny</li>
                 </ul>
 
             </div>
         </section>
     </div>
     <div class="container">
+        <!--recenze:-->
+        <section class="my-5">
+            <h2 class="mb-4 text-center">Co říkají naši zákazníci</h2>
+            <div class="row gy-4">
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="text-warning">★★★★★</span>
+                            <p class="card-text">"Pronájem mráčku byl skvělý zážitek! Perfektní pro naši svatbu a
+                                všichni hosté byli nadšení."</p>
+                            <h5 class="card-title mt-3">- Jana K.</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="text-warning">★★★★★</span>
+                            <p class="card-text">"Použil jsem mráček pro přepravu zboží a byl to nejrychlejší a
+                                nejpohodlnější způsob, jak jsem kdy cestoval!"</p>
+                            <h5 class="card-title mt-3">- Petr S.</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="text-warning">★★★★★</span>
+                            <p class="card-text">"Mraky na zastínění byly perfektní pro naši zahradní párty. Doporučuji
+                                všem!"</p>
+                            <h5 class="card-title mt-3">- Lucie M.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="formular" class="py-5">
             <div class="container">
                 <div class="row justify-content-center">
@@ -157,9 +220,9 @@
                                             placeholder="Kam má mrak letět?" required>
                                     </div>
                                     <div class="mb-4">
-                                        <label for="specialRequests" class="form-label">Tvůj email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Tvůj email"
-                                            required>
+                                        <label for="emailInput" class="form-label">Tvůj email</label>
+                                        <input type="email" class="form-control" id="emailInput"
+                                            placeholder="Tvůj email" required>
                                     </div>
                                     <div class="d-grid">
                                         <button type="submit" class="btn btn-primary btn-lg">
@@ -182,49 +245,23 @@
             <p>
                 Máte otázky? Kontaktujte nás na <a href="mailto:mail@mraky.example">mail@mraky.example</a>. Rádi vám
                 pomůžeme s výběrem toho pravého mráčku pro vaše potřeby!
-                <div class="mt-4">
-                    <h5>Sledujte nás na sociálních sítích:</h5>
-                    <div class="d-flex align-items-center mt-2"></div>
-                        <a href="#" class="d-inline-flex align-items-center btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener" aria-label="Facebook">
-                            <svg width="24" height="24" viewBox="0 0 32 32" role="img" aria-hidden="false" class="me-2">
-                                <circle cx="16" cy="16" r="16" fill="#1877F2"></circle>
-                                <text x="16" y="20" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#fff" text-anchor="middle">f</text>
-                            </svg>
-                            Facebook
-                        </a>
+            <div class="mt-4">
+                <h5>Sledujte nás na sociálních sítích:</h5>
+                <div class="d-flex align-items-center mt-2"></div>
+                <ul class="list-unstyled d-flex mb-0">
+                    <li><a href="#" class="me-3">Facebook</a>
+                    <li><a href="#" class="me-3">Twitter</a>
+                    <li><a href="#">Instagram</a>
+                </ul>
+            </div>
 
-                        <a href="#" class="d-inline-flex align-items-center btn btn-outline-info btn-sm me-2" target="_blank" rel="noopener" aria-label="Twitter">
-                            <svg width="24" height="24" viewBox="0 0 32 32" role="img" aria-hidden="false" class="me-2">
-                                <circle cx="16" cy="16" r="16" fill="#1DA1F2"></circle>
-                                <text x="16" y="20" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#fff" text-anchor="middle">t</text>
-                            </svg>
-                            Twitter
-                        </a>
-
-                        <a href="#" class="d-inline-flex align-items-center btn btn-outline-danger btn-sm" target="_blank" rel="noopener" aria-label="Instagram">
-                            <svg width="24" height="24" viewBox="0 0 32 32" role="img" aria-hidden="false" class="me-2">
-                                <defs>
-                                    <linearGradient id="igGrad" x1="0" x2="1" y1="0" y2="1">
-                                        <stop offset="0" stop-color="#f58529"/>
-                                        <stop offset="0.5" stop-color="#dd2a7b"/>
-                                        <stop offset="1" stop-color="#8134af"/>
-                                    </linearGradient>
-                                </defs>
-                                <circle cx="16" cy="16" r="16" fill="url(#igGrad)"></circle>
-                                <rect x="11" y="9" width="10" height="10" rx="2" ry="2" fill="rgba(255,255,255,0.95)"></rect>
-                                <circle cx="16" cy="14" r="3" fill="#8134af"></circle>
-                            </svg>
-                            Instagram
-                        </a>
-                    </div>
-                </div>
-            
         </section>
         <footer class="mt-5 mb-3 text-center text-muted">
             &copy; 2025 Pronajmi si mráček. Všechna práva vyhrazena.
             <br>
             <a href="#">Podmínky služby</a> | <a href="#">Zásady ochrany osobních údajů</a>
         </footer>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
