@@ -9,7 +9,7 @@ Repozitář aktuálně obsahuje následující části:
 
 - **`referat.md`** – zpracovaný referát.
 - **`prvni_web/`** – adresář obsahující testovací soubory do hodin WT. 
-
+- **`microsite/`** – Můj testovací web pro imanigární společnost.
 ---
 
 ## Autor
