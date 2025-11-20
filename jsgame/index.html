@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hádej číslo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input[type="number"] {
+            width: 50px;
+        }
+
+        button, input[type="button"] {
+            margin-left: 10px;
+        }
+        button:hover, input[type="button"]:hover {
+            cursor: pointer;
+        }
+
+        button{
+            background-color: lightblue;
+            border: none;
+            padding: 5px 10px;
+            font-size: 1.5em;
+            border-radius: 10px;
+            display:block;
+            margin: 20px auto;
+
+        }
+        main{
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+
+        }
+        section{
+            margin: 20px 0;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 10px;
+            
+        }
+        .sign{
+            font-size:5em;
+            color:grey;
+            text-align:center;
+            padding:30px;
+            border-radius: 10px;
+            background-color: azure;
+        }
+        .input{
+            border-radius: 10px;
+            min-width:3em;
+            font-size: 2em;
+            padding:5px;
+            margin:10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Hádej číslo</h1>
+        <p>Hádej číslo od 1 do <input type="nubmer" id="maximum" value="20"></p>
+        <button onclick="newGame()">Nová hra</button>
+        <section>
+            <div id=bigSign class="sign">
+                &gt;
+            </div>
+            <input class="input" type="number" id="guess" placeholder="Zadej své číslo">
+            <input type="button" id="submit" value="Zkus" onclick="submitGuess()">
+        </section>
+
+        <p>
+            počet pokusů: <span id="attempts">0</span>.
+           
+        </p>
+    </main>
+    <script>
+        const guessInput = document.getElementById('guess');
+        const attemptsSpan = document.getElementById('attempts');
+        const submitButton = document.getElementById('submit');
+        let secreat = 0;
+        let attempts = 0;
+        function newGame() {
+            secreat = Math.floor(Math.random() * maximum.value) + 1;
+            console.log("== nová hra ==");
+            attempts = 0;
+        }
+
+        function submitGuess() {
+
+
+            const guess = parseInt(guessInput.value, 10);
+            attempts += 1;
+            attemptsSpan.textContent = attempts;
+
+            if (guess === secreat) {
+                alert(`Gratulace! Uhodl jsi číslo ${secreat} za ${attempts} pokusů.`);
+                document.rootElement.style.backgroundColor = 'lightgreen';
+                attemptsSpan.textContent = '0';
+            } else if (guess < secreat) {
+                alert('Tvé číslo je příliš nízké.');
+                bigSign.innerHTML = "&gt;"
+            } else {
+                alert('Tvé číslo je příliš vysoké.');
+                bigSign.innerHTML = "&lt;"
+
+            }
+
+            guessInput.value = '';
+        }
+
+        guessInput.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                submitGuess();
+            }
+        });
+    </script>
+</body>
+
+</html>
