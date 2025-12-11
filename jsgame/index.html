@@ -15,52 +15,58 @@
             width: 50px;
         }
 
-        button, input[type="button"] {
+        button,
+        input[type="button"] {
             margin-left: 10px;
         }
-        button:hover, input[type="button"]:hover {
+
+        button:hover,
+        input[type="button"]:hover {
             cursor: pointer;
         }
 
-        button{
+        button {
             background-color: lightblue;
             border: none;
             padding: 5px 10px;
             font-size: 1.5em;
             border-radius: 10px;
-            display:block;
+            display: block;
             margin: 20px auto;
 
         }
-        main{
+
+        main {
             max-width: 400px;
             margin: auto;
             text-align: center;
 
         }
-        section{
+
+        section {
             margin: 20px 0;
             background-color: #f0f0f0;
             padding: 10px;
             border-radius: 10px;
-            
+
         }
-        .sign{
-            font-size:5em;
-            color:grey;
-            text-align:center;
-            padding:30px;
+
+        .sign {
+            font-size: 5em;
+            color: grey;
+            text-align: center;
+            padding: 30px;
             border-radius: 10px;
             background-color: azure;
         }
-        .input{
+
+        .input {
             border-radius: 10px;
-            min-width:3em;
+            min-width: 3em;
             font-size: 2em;
-            padding:5px;
-            margin:10px;
+            padding: 5px;
+            margin: 10px;
         }
-        
     </style>
 </head>
 
@@ -79,7 +85,7 @@
 
         <p>
             počet pokusů: <span id="attempts">0</span>.
-           
+
         </p>
     </main>
     <script>
@@ -102,13 +108,19 @@
             attemptsSpan.textContent = attempts;
 
             if (guess === secreat) {
+                console.log(`Gratulace! Uhodl jsi číslo ${secreat} za ${attempts} pokusů.`);
+
                 alert(`Gratulace! Uhodl jsi číslo ${secreat} za ${attempts} pokusů.`);
                 document.rootElement.style.backgroundColor = 'lightgreen';
                 attemptsSpan.textContent = '0';
             } else if (guess < secreat) {
                 alert('Tvé číslo je příliš nízké.');
+                console.log('Tvé číslo je příliš nízké.');
+
                 bigSign.innerHTML = "&gt;"
             } else {
+                console.log('Tvé číslo je příliš vysoké.');
+
                 alert('Tvé číslo je příliš vysoké.');
                 bigSign.innerHTML = "&lt;"
 
