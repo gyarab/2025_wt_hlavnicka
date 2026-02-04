@@ -1,4 +1,5 @@
 import httpx
+
 import sys
 
 CNB_URL = "https://www.cnb.cz/cs/financni-trhy/devizovy-trh/kurzy-devizoveho-trhu/kurzy-devizoveho-trhu/denni_kurz.txt"
@@ -116,3 +117,4 @@ def prevest_meny():
 while True:
     main()
     input("\n\nStiskněte Enter pro pokračování...")
+
